@@ -37,9 +37,8 @@ This project uses environment variables to manage sensitive data and configurati
 cp .env.example .env.dev
 ```
 
-2. Edit the .env.dev file and fill in your own values for the following variables:
+2. Edit the .env.dev file and fill in your own values.
 
-3. Save the .env.dev file. Do not commit this file to the repository, as it contains sensitive information.
 
 
 
