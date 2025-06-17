@@ -1,3 +1,6 @@
+const env = process.env.NODE_ENV || 'dev';
+require('dotenv').config({ path: `.env.${env}` });
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
@@ -8,6 +11,7 @@ require('./models/User');
 require('./models/Blog');
 require('./services/passport');
 require('./services/cache');
+
 
 mongoose.connect(keys.mongoURI, {
   serverSelectionTimeoutMS: 5000 // Timeout after 5s if not connected

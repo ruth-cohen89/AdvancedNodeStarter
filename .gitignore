@@ -4,4 +4,9 @@ nohup.out
 .idea
 dump.rdb
 demo.js
-config/
+
+.env*
+!.env.example
+
+
+

@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config({ path: '.env.dev' });
+
 jest.setTimeout(30000);
 
 require('../models/User');
