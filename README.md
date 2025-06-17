@@ -2,6 +2,18 @@
 
 Starting project for a course on Advanced Node @ Udemy
 
+### Environment Variables Setup
+
+This project uses environment variables to manage sensitive data and configuration.
+
+- Copy the example environment file:
+```bash
+cp .env.example .env.dev
+```
+- Edit the .env.dev file and fill in your own values.
+
+---
+
 ### Setup
 
 - Run `npm install` in the root of the project to install server dependencies
@@ -25,19 +37,8 @@ If you replace `cookie-session` with `express-session`, the login tests will no 
 
 In that case, you will need to redesign your testing strategy for authentication to accommodate the change.
 
----
 
-## Environment Variables Setup
 
-This project uses environment variables to manage sensitive data and configuration.
-
-1. Copy the example environment file:
-
-```bash
-cp .env.example .env.dev
-```
-
-2. Edit the .env.dev file and fill in your own values.
 
 
 
