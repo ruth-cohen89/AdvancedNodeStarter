@@ -25,6 +25,23 @@ If you replace `cookie-session` with `express-session`, the login tests will no 
 
 In that case, you will need to redesign your testing strategy for authentication to accommodate the change.
 
+---
+
+## Environment Variables Setup
+
+This project uses environment variables to manage sensitive data and configuration.
+
+1. Copy the example environment file:
+
+```bash
+cp .env.example .env.dev
+```
+
+2. Edit the .env.dev file and fill in your own values for the following variables:
+
+3. Save the .env.dev file. Do not commit this file to the repository, as it contains sensitive information.
+
+
 
 
 
