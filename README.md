@@ -5,11 +5,7 @@ A starter project for the *Advanced Node.js* course on Udemy
 ### Environment Variables Setup
 
 This project uses environment variables to manage sensitive data and configuration.
-
-- Copy the example environment file:
-```bash
-cp .env.example .env.dev
-```
+- Copy the example environment file `cp .env.example .env.dev`
 - Edit the .env.dev file and fill in your own values.
 
 
