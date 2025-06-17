@@ -20,7 +20,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.826.0",
+    "@aws-sdk/client-s3": "^3.828.0",
+    "@aws-sdk/s3-request-presigner": "^3.828.0",
     "concurrently": "9.1.2",
     "cookie-session": "^2.1.0",
     "express": "5.1.0",
@@ -34,6 +35,6 @@
     "path-parser": "6.1.0",
     "puppeteer": "^24.10.0",
     "redis": "^5.5.6",
-    "uuid": "11.1.0"
+    "uuid": "^11.1.0"
   }
 }
