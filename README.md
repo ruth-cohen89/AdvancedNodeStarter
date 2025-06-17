@@ -1,6 +1,6 @@
 # AdvancedNodeStarter
 
-Starting project for a course on Advanced Node @ Udemy
+A starter project for the *Advanced Node.js* course on Udemy
 
 ### Environment Variables Setup
 
@@ -13,7 +13,7 @@ cp .env.example .env.dev
 - Edit the .env.dev file and fill in your own values.
 
 
-### Setup
+### Project Setup
 
 - Run `npm install` in the root of the project to install server dependencies
 - Change into the client directory and run `npm install --legacy-peer-deps`
