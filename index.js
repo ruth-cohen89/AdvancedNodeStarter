@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
+const cors = require('cors');
 
 require('./models/User');
 require('./models/Blog');
@@ -20,6 +21,8 @@ mongoose.connect(keys.mongoURI, {
     .catch(err => console.error('MongoDB Connection Error:' , err));
 
 const app = express();
+
+//app.use(cors());
 
 app.use(express.json());
 

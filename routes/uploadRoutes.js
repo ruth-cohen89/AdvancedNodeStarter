@@ -13,19 +13,18 @@ const s3 = new S3Client({
     region: 'il-central-1',
 });
 
-
 module.exports = app => {
     app.get('/api/upload', requireLogin, async (req, res) => {
-        const key = `${req.user.id}/${uuidv4()}.jpg`;
-
+        const key = `${uuidv4()}`;
         const command = new PutObjectCommand({
-            Bucket: "s3-blog-bucket",
+            Bucket: 'blogster-app-bucket',
             Key: key,
             ContentType: 'image/jpeg',
         });
 
         const url = await getSignedUrl(s3, command, { expiresIn: 3600 });
-
         res.send({ key, url });
-    })
+    });
+
+
 }

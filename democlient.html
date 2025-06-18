@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload to S3</title>
+</head>
+<body>
+<input type="file" id="fileInput" />
+<button onclick="upload()">Upload</button>
+
+<script>
+    async function upload() {
+    const fileInput = document.getElementById("fileInput");
+    const file = fileInput.files[0];
+        console.log('file', file)
+    if (!file) return alert("No file selected");
+
+    // שלב 1: בקשה לשרת שלך לקבל URL חתום
+    const res = await fetch("http://localhost:5000/api/upload");
+    const { url, key } = await res.json();
+
+    // שלב 2: שליחת הקובץ ישירות ל-S3
+    const uploadRes = await fetch(url, {
+    method: "PUT",
+    body: file,
+    headers: {
+    "Content-Type": file.type
+}
+});
+
+    if (uploadRes.ok) {
+    alert("✅ Upload succeeded!");
+    console.log("File key on S3:", key);
+} else {
+    alert("❌ Upload failed");
+    const errorText = await uploadRes.text();
+    console.error(errorText);
+}
+}
+</script>
+</body>
+</html>

@@ -3,7 +3,9 @@ nohup.out
 .DS_Store
 .idea
 dump.rdb
+
 demo.js
+test.jpg
 
 .env*
 !.env.example
