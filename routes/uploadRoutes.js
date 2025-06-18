@@ -25,6 +25,4 @@ module.exports = app => {
         const url = await getSignedUrl(s3, command, { expiresIn: 3600 });
         res.send({ key, url });
     });
-
-
 }
