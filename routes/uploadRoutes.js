@@ -15,7 +15,7 @@ const s3 = new S3Client({
 
 module.exports = app => {
     app.get('/api/upload', requireLogin, async (req, res) => {
-        const key = `${uuidv4()}`;
+        const key = `${req.user.id}/${uuidv4()}.jpeg`;
         const command = new PutObjectCommand({
             Bucket: 'blogster-app-bucket',
             Key: key,
